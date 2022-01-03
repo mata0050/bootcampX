@@ -6,3 +6,7 @@ JOIN cohorts ON cohort_id = cohorts.id
 WHERE cohorts.name = 'JUL02'
 GROUP BY cohort, teacher
 ORDER BY teacher;
+
+
+ALTER TABLE users
+ADD COLUMN nmember_since TIMESTAMP NOT NULL DEFAULT Now();
